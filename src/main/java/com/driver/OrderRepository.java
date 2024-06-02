@@ -128,6 +128,10 @@ public class OrderRepository {
             }
             result = result + (maxTime / 60) + ":" + (maxTime % 60);
         }
-        return result;
+        System.out.println(result);
+        System.out.println(partnerId);
+        System.out.println(orders.toString());
+        System.out.println(orderMap.toString());
+        return result;  
     }
 }
