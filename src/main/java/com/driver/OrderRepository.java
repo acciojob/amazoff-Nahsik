@@ -78,7 +78,7 @@ public class OrderRepository {
         // delete order by ID
         orderMap.remove(orderId);
         for(String orderId1 : partnerToOrderMap.keySet()){
-            HashSet<String> orders = partnerToOrderMap.get(orderId1););
+            HashSet<String> orders = partnerToOrderMap.get(orderId1);
               if(orders.contains(orderId)){
                   orders.remove(orderId);
                   partnerToOrderMap.put(orderId1, orders);
