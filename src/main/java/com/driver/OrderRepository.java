@@ -126,12 +126,14 @@ public class OrderRepository {
                     maxTime = order.getDeliveryTime();
                 }
             }
-            result = result + (maxTime / 60) + ":" + (maxTime % 60);
+            int hours = maxTime / 60;
+            int min = maxTime % 60;
+            result = result + (hours < 10 ? "0" + hours : hours) + ":" + (min < 10 ? "0" + min : min);
         }
         System.out.println(result);
         System.out.println(partnerId);
         System.out.println(orders.toString());
         System.out.println(orderMap.toString());
-        return result;  
+        return result;
     }
 }
